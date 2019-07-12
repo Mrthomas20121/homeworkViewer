@@ -1,0 +1,55 @@
+{
+  "author": {
+    "name":"Karasma",
+    "url":null
+  },
+  "handled_by_script": {
+
+    "view_homework_file": {
+      
+      // this is the app name
+      "app.name": "HomeworkViewer",
+
+      // this is the alert that show when no homeworks exist in homework.json
+      "app.alert.noHomwork": "Es wurden keine Hausaufgaben gefunden! Benutze STRG+N um eine neue Hausaufgabe hinzuzufügen",
+
+      // alert: show when you just removed a homework from the homework.json file
+      "app.alert.removedHomework": "{Homework} wurde erfolgreich entfernt",
+
+      // this is the class the homework is for
+      "app.homework.class": "Unterrichtsfach",
+
+      // this is the homework you have to do for a class
+      "app.homework.homework": "Hausaufgabe",
+
+      // this is for when you have to do the homework
+      "app.homework.for": "Bis wann?",
+
+      // is the homework done?
+      "app.homework.done": "Erledigt?"
+    },
+    "add_homework_file": {
+
+      // the Homework you have to do
+      "app.homework.add.homework": "Hausaufgaben(zu erledigen):",
+
+      // the class the homework is for(again)
+      "app.homework.add.class": "Unterrichtsfach:",
+
+      // the date the homework is for
+      "app.homework.add.date": "Datum:",
+
+      // the button the user have to click
+      "app.homework.add.button": "Ok"
+    }
+  },
+  "handled_by_menu": {
+    // anything handled by the menu is here
+
+    // button on the menu that add new Homework
+    "app.button.addHomework": "Hausaufgabe hinzufügen",
+
+    // button on the menu that show Homeworks
+    "app.button.viewHomework": "Hausaufgaben anzeigen"
+  }
+}
