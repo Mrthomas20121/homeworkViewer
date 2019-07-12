@@ -1,0 +1,55 @@
+{
+  "author": {
+    "name":"32zlote",
+    "url":null
+  },
+  "handled_by_script": {
+
+    "view_homework_file": {
+      
+      // this is the app name
+      "app.name": "HomeworkViewer",
+
+      // this is the alert that show when no homeworks exist in homework.json
+      "app.alert.noHomwork": "Nie istnieje żaden zapis pracy domowej! Naciśnij CTRL+N, aby dodać nową pracę domową",
+
+      // alert: show when you just removed a homework from the homework.json file
+      "app.alert.removedHomework": "Poprawnie usunięto {Homework}",
+
+      // this is the class the homework is for
+      "app.homework.class": "Przedmiot",
+
+      // this is the homework you have to do for a class
+      "app.homework.homework": "Zadanie domowe",
+
+      // this is for when you have to do the homework
+      "app.homework.for": "Do",
+
+      // is the homework done?
+      "app.homework.done": "Skończyłeś?"
+    },
+    "add_homework_file": {
+
+      // the Homework you have to do
+      "app.homework.add.homework": "Zadanie domowe (do zrobienia):",
+
+      // the class the homework is for(again)
+      "app.homework.add.class": "Przedmiot:",
+
+      // the date the homework is for
+      "app.homework.add.date": "Data:",
+
+      // the button the user have to click
+      "app.homework.add.button": "✔️"
+    }
+  },
+  "handled_by_menu": {
+    // anything handled by the menu is here
+
+    // button on the menu that add new Homework
+    "app.button.addHomework": "Dodaj zadanie domowe",
+
+    // button on the menu that show Homeworks
+    "app.button.viewHomework": "Wyświetl zadanie domowe"
+  }
+}
