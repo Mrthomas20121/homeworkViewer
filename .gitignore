@@ -1,0 +1,9 @@
+# folders ignored
+node_modules
+
+# files ignored
+*.bat
+*.code-workspace
+# invisible files
+desktop.ini
+.DS_Store
