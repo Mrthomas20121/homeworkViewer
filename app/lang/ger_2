@@ -1,0 +1,55 @@
+{
+  "author": {
+    "name":"Maspian",
+    "url":null
+  },
+  "handled_by_script": {
+
+    "view_homework_file": {
+      
+      // this is the app name
+      "app.name": "HomeworkViewer",
+
+      // this is the alert that show when no homeworks exist in homework.json
+      "app.alert.noHomwork": "Inga läxor hittades! Använd CTRL+N för att lägga till en läxa",
+
+      // alert: show when you just removed a homework from the homework.json file
+      "app.alert.removedHomework": "{Homework} togs bort",
+
+      // this is the class the homework is for
+      "app.homework.class": "Klass",
+
+      // this is the homework you have to do for a class
+      "app.homework.homework": "Läxa",
+
+      // this is for when you have to do the homework
+      "app.homework.for": "Till",
+
+      // is the homework done?
+      "app.homework.done": "Färdig?"
+    },
+    "add_homework_file": {
+
+      // the Homework you have to do
+      "app.homework.add.homework": "Homework(to do):",
+
+      // the class the homework is for(again)
+      "app.homework.add.class": "Klass:",
+
+      // the date the homework is for
+      "app.homework.add.date": "Datum:",
+
+      // the button the user have to click
+      "app.homework.add.button": "Ok"
+    }
+  },
+  "handled_by_menu": {
+    // anything handled by the menu is here
+
+    // button on the menu that add new Homework
+    "app.button.addHomework": "add Homework",
+
+    // button on the menu that show Homeworks
+    "app.button.viewHomework": "Visa Läxa"
+  }
+}
