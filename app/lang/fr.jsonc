@@ -1,0 +1,55 @@
+{
+  "author": {
+    "name":"Mrthomas20121",
+    "url":"github.com/Mrthomas20121"
+  },
+  "handled_by_script": {
+
+    "view_homework_file": {
+      
+      // this is the app name
+      "app.name": "Devoir Viewer",
+
+      // this is the alert that show when no homeworks exist in homework.json
+      "app.alert.noHomwork": "Pas de devoirs trouvé! Utilise CTRL+N pour ajouter des Devoirs",
+
+      // alert: show when you just removed a homework from the homework.json file
+      "app.alert.removedHomework": "{Homework} a bien été supprimé",
+
+      // this is the class the homework is for
+      "app.homework.class": "Classe",
+
+      // this is the homework you have to do for a class
+      "app.homework.homework": "Devoir",
+
+      // this is for when you have to do the homework
+      "app.homework.for": "Pour",
+
+      // is the homework done?
+      "app.homework.done": "Fini?"
+    },
+    "add_homework_file": {
+
+      // the Homework you have to do
+      "app.homework.add.homework": "Devoir(à faire):",
+
+      // the class the homework is for(again)
+      "app.homework.add.class": "Classe:",
+
+      // the date the homework is for
+      "app.homework.add.date": "Date:",
+
+      // the button the user have to click
+      "app.homework.add.button": "Ok"
+    }
+  },
+  "handled_by_menu": {
+    // anything handled by the menu is here
+
+    // button on the menu that add new Homework
+    "app.button.addHomework": "Ajoute des Devoirs",
+
+    // button on the menu that show Homeworks
+    "app.button.viewHomework": "Regarde les Devoirs"
+  }
+}

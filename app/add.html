@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>
+   Homework Viewer
+  </title>
+  <!-- including bootstrap and stuff -->
+    <script>
+            window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.js');
+    </script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootswatch/journal/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body ondragstart="return false;" ondrop="return false;">
+	<div class="container-fluid">
+    <div class="form-group">
+      <label>Homework(to do) :</label><input id="devoir" class="form-control"/>
+    </div>
+    <div class="form-group" id="mati">
+
+    </div>
+    <div class="form-group">
+      <label>Date</label><input type="date" id="date" class="form-control" placeholder=""/>
+    </div>
+    <button class="btn btn-danger" onclick="crea()">Ok</button>
+  </div>
+  <script>
+    const jsonc = require('./lib/jsonc-reader');
+    const homework = jsonc.read('./config.jsonc', { encoding:'utf8'});
+    const form = document.getElementById('mati')
+    const select = document.createElement('select')
+    //select.style.color = '#000'
+    select.classList.add('form-control')
+    select.id = 'mat'
+    for (const classes of homework.classes) { 
+      let elem = document.createElement('option')
+      elem.value = classes
+      elem.innerHTML = classes
+      select.appendChild(elem)
+      console.log(elem)
+
+    };
+    const label = document.createElement('label')
+    label.innerHTML = 'Classe';
+    form.appendChild(label)
+    form.appendChild(select)
+  </script>
+  <script src="./lib/homework_add.js"></script>
+</body>
+</html>
