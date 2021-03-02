@@ -4,19 +4,20 @@
   "description": "View and add homework !",
   "main": "app.js",
   "dependencies": {
-    "electron-context-menu": "^0.9.1"
+    "bootstrap": "^3.4.1",
+    "bootswatch": "^3.4.0",
+    "electron-context-menu": "^0.9.1",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "bootstrap": "^3.4.0",
-    "bootswatch": "^3.4.0",
-    "electron": "^1.6.2",
-    "electron-packager": "^8.7.2",
-    "electron-winstaller": "^2.6.3",
-    "jquery": "^3.3.1"
+    "electron": "^8.1.1",
+    "electron-packager": "^14.0.3"
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager ./ HomeworkViewer --platform win32 --asar=true --icon=./assets/icons/main.ico --version-string.LegalCopyright=Mrthomas20121 --version-string.CompanyName=Mrthomas20121 --version-string.FileDescription=HomeworkViewer --version-string.ProductName=HomeworkViewer --version-string.OriginalFilename=HomeworkViewer.exe"
+    "build-linux": "electron-packager ./ --overwrite --asar --platform=linux --arch=x64 --icon=./assets/icons/main.ico --version-string.LegalCopyright=Mrthomas20121 --version-string.OriginalFilename=HomeworkViewer.exe",
+    "build": "electron-packager ./ --asar --save=array-unique --version-string.LegalCopyright=Mrthomas20121 --version-string.OriginalFilename=HomeworkViewer.exe",
+    "build-mac": "electron-packager ./ --asar --overwrite --platform=darwin --arch=x64 --icon=./assets/icons/main.ico --version-string.LegalCopyright=Mrthomas20121 --version-string.OriginalFilename=HomeworkViewer.exe"
   },
   "author": "Mrthomas20121",
   "license": "ISC"

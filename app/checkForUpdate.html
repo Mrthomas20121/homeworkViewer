@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title id="app.name">
+   Homework Viewer
+  </title>
+  <!-- including bootstrap and stuff -->
+    <script>
+            window.$ = window.jQuery = require('../node_modules/jquery/dist/jquery.js');
+    </script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootswatch/journal/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/pretty.css"/>
+</head>
+<body>
+    <script>
+        const fs = require('fs')
+        let checkForUpdate = () => {
+            fetch('http://example.com/movies.json')
+            .then(response => response.json())
+            .then(data => {
+                loadApp(data.version)
+            });
+        }
+
+        let loadApp = (data) => {
+            let app_version = require('./version.json').version
+            let version = data.version
+
+            if(app_version != version) location.assign(`./index.html?update=true&version=${version}`)
+            else location.assign(`./index.html?update=false&version=${app_version}`)
+        }
+    </script>
+</body>

@@ -19,7 +19,10 @@ app.on('ready', function() {
     name: "Devoir",
     width: 720,
     height: 720,
-    icon: __dirname + '\\app\\icons\\main.png'
+    icon: __dirname + '\\app\\icons\\main.png',
+	webPreferences: {
+	  nodeIntegration: true
+	}
    })
 
 app.on('window-all-closed', function() {

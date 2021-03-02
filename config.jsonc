@@ -1,12 +1,10 @@
 {
+  // classes
   "classes": [
-    "SLAM3",
-    "SLAM4",
-    "SLAM5",
-    "PPE",
-    "CultureGénérale",
-    "English",
-    "EcoDroit"
+    "Math",
+    "Computer Science",
+	  "English"
   ],
-  "lang": "fr"
+  // language string
+  "lang": "en"
 }

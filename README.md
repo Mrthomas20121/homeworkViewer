@@ -8,3 +8,6 @@ feel free to use it.
 Currently supported language: </br>
 French By Myself</br>
 English By Myself
+German By Karasma
+czech By Tefek(https://github.com/493msi)
+Swedish by Maspian

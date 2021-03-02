@@ -1,5 +1,5 @@
 /*
-  Jsonc reader by Mrthomas20121(https://github.com/Mrthomas20121) and Tefek(https://github.com/493msi)
+  Jsonc reader by Mrthomas20121(https://github.com/Mrthomas20121) with help from Tefek(https://github.com/493msi)
 */
 
 /**
