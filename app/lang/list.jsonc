@@ -1,0 +1,26 @@
+[
+    {
+        "name": "english",
+        "default": true
+    },
+    {
+        "name": "french",
+        "default": false
+    },
+    {
+        "name": "polish",
+        "default": false
+    },
+    {
+        "name": "german",
+        "default": false
+    },
+    {
+        "name": "czech",
+        "default": false
+    },
+    {
+        "name": "swedish",
+        "default": false
+    }
+]

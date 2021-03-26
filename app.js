@@ -51,6 +51,6 @@ var m = Menu.buildFromTemplate([
   }
   ])
 mainWindow.setMenu(m);
-mainWindow.loadURL('file://' + path.join(__dirname, "app") + '/index.html');
+mainWindow.loadURL('file://' + path.join(__dirname, "app") + '/checkForUpdate.html');
 
 });

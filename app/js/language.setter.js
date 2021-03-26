@@ -16,14 +16,13 @@ const params = new URLSearchParams(location.search);
 if(params.has('homework')) {
   let removed_homework = $('#homework_removed');
   removed_homework.show(1000);
-  if(config.lang == 'en')
+  if(config.lang == 'english')
   document.getElementById('app.alert.removedHomework').innerHTML = `Succefully removed "${params.get('homework')}"`
 }
 
 // loop though every language to see if one match
-// note: i could use a while to do it
 for (const language of listLanguage) {
-  if(language.code == config.lang) {
-    handleLanguage(`${langPath}\\${language.code}.jsonc`, encoding);
+  if(language.name == config.lang) {
+    handleLanguage(`${langPath}\\${language.name}.jsonc`, encoding);
   }
 }
