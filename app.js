@@ -1,4 +1,5 @@
-const {app, dialog, BrowserWindow, Menu} = require('electron')
+const {app, BrowserWindow, ipcMain, dialog} = require('electron')
+const jsonc = require('./app/js/jsonc-reader')
 const fs = require('fs');
 const path = require('path');
 const isDev = require('electron-is-dev');
@@ -7,50 +8,40 @@ if(isDev) {
     prepend: (params, browserWindow) => []
   });
 }
-let homework = {
-  label_add_homework:'add homework',
-  label_view_homework:'view homework'
-}
 
-var mainWindow;
+let mainWindow;
+
 app.on('ready', function() {
 
-  mainWindow = new BrowserWindow({
-    name: "Devoir",
-    width: 720,
-    height: 720,
-    icon: __dirname + '\\app\\icons\\main.png',
-	webPreferences: {
-	  nodeIntegration: true
-	}
-   })
+    mainWindow = new BrowserWindow({
+        name: "Devoir",
+        width: 720,
+        height: 720,
+        icon: path.join(__dirname, 'app/icons/main.png'),
+        webPreferences: {
+            preload:path.join(__dirname, "app/js/preload.js")
+        }
+    })
 
-app.on('window-all-closed', function() {
-      app.quit();
-});
+    // close the app when all windows are closed
+    app.on('window-all-closed', function() {
+        app.quit();
+    });
 
-app.on('open-file', function (event, file) {
-    var content = fs.readFileSync(file).toString();
-    mainWindow.webContents.send('file-opened', file, content);
-});
-var m = Menu.buildFromTemplate([
-	{
-    label: 'Add homeworks',
-    accelerator: "Ctrl+N",
-      click () { 
-      mainWindow.loadURL('file://' + path.join(__dirname, "app") + '/add.html');
-    }
-  },
-  {
-    label : 'View homeworks',
-    accelerator: "Ctrl+V",
-    click() {
-      if(mainWindow)
-      mainWindow.loadURL('file://' + path.join(__dirname, "app") + '/index.html');
-    }
-  }
-  ])
-mainWindow.setMenu(m);
-mainWindow.loadURL('file://' + path.join(__dirname, "app") + '/checkForUpdate.html');
+    app.on('open-file', function (event, file) {
+        var content = fs.readFileSync(file).toString();
+        mainWindow.webContents.send('file-opened', file, content);
+    });
+
+    mainWindow.setMenu(null);
+    mainWindow.loadURL(path.join('file://', __dirname, "app") + '/checkForUpdate.html');
 
 });
+
+// read file
+ipcMain.handle('readFile', (event, ...args) => {
+    let file = args[0]
+    let file_content = jsonc.read(file, 'utf8')
+    return JSON.parse(file_content)
+
+})

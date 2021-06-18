@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://raw.githubusercontent.com">
     <title id="app.name">
     Homework Viewer
     </title>
@@ -11,26 +12,10 @@
     <link rel="stylesheet" href="./css/pretty.css"/>
 </head>
 <body>
-    <script>
-        const fs = require('fs')
-        let checkForUpdate = () => {
-            fetch('https://raw.githubusercontent.com/Mrthomas20121/homeworkViewer/master/app/version.json')
-            .then(response => response.json())
-            .then(data => {
-                loadApp(data)
-            });
-        }
-
-        let loadApp = (data) => {
-            let app_version = require('./version.json').version
-            let version = data.version
-
-            if(app_version != version) location.assign(`./index.html?update=true&version=${version}`)
-            else location.assign(`./index.html?update=false&version=${app_version}`)
-        }
-
-        checkForUpdate()
-    </script>
+    <div class="container">
+        <p>Checking for update</p>
+    </div>
+    <script src="./js/update_check.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
-	<script src="../js/popper.min.js"></script>
+	<script src="./js/popper.min.js"></script>
 </body>
